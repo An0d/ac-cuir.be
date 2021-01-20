@@ -1,0 +1,25 @@
+body {
+    background-color: #243665;
+}
+
+.svg-conbtainer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+    }
+}
