@@ -435,29 +435,101 @@ body {
   fill: currentColor;
 }
 
-body {
-  background-color: #243665;
+html {
+  height: 100%;
 }
 
-.svg-conbtainer {
+body {
+  background-color: #243665;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-container {
   margin: 0 auto;
+  padding: 15px;
   width: 100%;
   max-width: 1140px;
 }
 
 footer {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px;
+  justify-content: center;
+  padding: 40px 15px;
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 footer .icon {
   width: 32px;
   height: 32px;
   margin-right: 10px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 1.8rem;
+  line-height: 1;
+  z-index: 1;
+  padding: 10px 15px;
+}
+
+footer a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+footer a:hover:after {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffffff;
+  animation: anim 750ms ease;
+}
+
+@keyframes anim {
+  from {
+    width: 0;
+    height: 0;
+    border-right-width: 0;
+  }
+  20% {
+    width: 0;
+    height: 100%;
+  }
+  99% {
+    width: 100%;
+    height: 100%;
+    border-right-width: 0;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+    border-right-width: 1px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
